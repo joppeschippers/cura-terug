@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Cura</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #000; font: 600 20px -apple-system, system-ui, sans-serif; }
+  a { color: #fff; text-decoration: none; padding: 16px 28px; border-radius: 14px; background: #1c1c1e; }
+</style>
+</head>
+<body>
+<!-- Stuurt de terugkeer van de bank (?code=…&state=…) door naar de app. -->
+<a id="open" href="cura://bank">Open Cura</a>
+<script>
+  var doel = "cura://bank" + location.search;
+  document.getElementById("open").href = doel;
+  location.replace(doel);
+</script>
+</body>
+</html>
